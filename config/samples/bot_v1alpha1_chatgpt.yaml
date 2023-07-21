@@ -1,0 +1,12 @@
+apiVersion: bot.kodecove.com/v1alpha1
+kind: Chatgpt
+metadata:
+  labels:
+    app.kubernetes.io/name: chatgpt
+    app.kubernetes.io/instance: chatgpt-sample
+    app.kubernetes.io/part-of: aibot-controller
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: aibot-controller
+  name: chatgpt-sample
+spec:
+  # TODO(user): Add fields here

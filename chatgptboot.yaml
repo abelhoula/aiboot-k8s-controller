@@ -1,0 +1,26 @@
+apiVersion: bot.kodecove.com/v1alpha1
+kind: Chatgpt
+metadata:
+  name: my-chatgpt
+spec:
+  botConfig:
+    botCredentials:
+      openaiToken:
+        name: my-secret
+        key: openai-token-key
+      telgramToken:
+        name: my-secret
+        key: telegram-token-key
+    chatgptPriceToken: my-chatgpt-price-token
+    enableMsgStreaming: true
+    gptPriceToken: my-gpt-price-token
+    nChatPerPage: 5
+    newDialogTimeout: 10
+    whisperPrice: my-whisper-price
+  dbConfig:
+    host: my-database-host
+    passwordSecretRef:
+      name: my-database-secret
+      key: database-password
+    port: 3306
+    username: my-database-username
